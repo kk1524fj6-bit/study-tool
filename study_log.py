@@ -15,7 +15,11 @@ while True:
 
     # 7日経過
     if count == 7:
-        print(f'今週は{sum(day.values())}分勉強しました')
+        total = sum(day.values())
+        hour = total // 60
+        min = total % 60
+
+        print(f'今週は{total}分({hour}:{min})勉強しました')
 
         # リセット
         for d in day:
